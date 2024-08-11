@@ -1,0 +1,147 @@
+/* Basic styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 5%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    border-radius: 50px;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+/* Image styles */
+.product-image {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    display: block;
+    width: auto
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-flow: space-between;
+    flex: 1;
+}
+
+h3 {
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 5px;
+}
+
+h1 {
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    font-size: 3em;
+    margin: 10px 0;
+}
+
+p {
+    color: hsl(228, 12%, 48%);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Price section */
+.price-section h2,
+.price-section s {
+    margin: 0;
+}
+
+h2 {
+    color: hsl(158, 36%, 37%);
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+s {
+    color: hsl(228, 12%, 48%);
+}
+
+
+/* Button styles */
+button {
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button svg {
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .product-image {
+        width: 100%;
+        height: auto;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 15px;
+    }
+
+
+    button {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
